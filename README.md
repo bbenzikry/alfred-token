@@ -1,7 +1,6 @@
 # 🔎🎩 Alfred token search
 
-An [Alfred](https://www.alfredapp.com/) workflow that makes it easy to search for tokens and copy their address to the clipboard.
-Supports multiple chains.
+An [Alfred](https://www.alfredapp.com/) workflow that makes it easy to search for tokens across chains, copy their address to the clipboard and open them on relevant explorers.
 
 <div width="100%" align="center">
 <img width="500" src="https://user-images.githubusercontent.com/1993348/224241747-30050353-a348-4fe0-9486-7b4a7cb2455c.gif" />
@@ -18,18 +17,19 @@ Type a combination of chain id and token name, to find an address and copy it.
     token 137 --> Find tokens on Polygon
     token 137 USDC --> Find tokens containing USDC on Polygon
 
-return (↵) : Copy the selected address to your clipboard.
-cmd + return (⌘↵) : Show in explorer ( Etherscan based only at the moment )
+    return (↵) : Copy the selected address to your clipboard.
+    cmd + return (⌘↵) : Show in explorer ( Etherscan based only at the moment )
 
 ## Adding to Alfred 
 
 ### Download Workflow
 Check out [releases](https://github.com/bbenzikry/alfred-token/releases)
 
-## Notes
-As the [index file](./tokens.json) is based on existing token lists, some tokens / icons are not available.
+## More info
+- PNGs are optimized with ``pngquant``
+- Token data is populated from [viaprotocol/tokenlists](https://github.com/viaprotocol/tokenlists)
+- Chain data is populated from [ethereum-lists/chains](https://github.com/ethereum-lists/chains)
 
-PNGs are optimized with ``pngquant``
 
 <div align="center">
 Did this help you out? 
