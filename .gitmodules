@@ -1,0 +1,3 @@
+[submodule "tokenlists"]
+	path = tokenlists
+	url = https://github.com/viaprotocol/tokenlists
