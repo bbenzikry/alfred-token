@@ -6,6 +6,7 @@ Type a combination of chain id and token name, to find an address and copy it.
     token [token_name] [chain_id(optional)]
 
 return (↵) : Copy the selected address to your clipboard.
+cmd + return (⌘↵) : Show in explorer ( Etherscan based only at the moment )
 
 ## Automatic Updates
 

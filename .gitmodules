@@ -1,3 +1,6 @@
 [submodule "tokenlists"]
 	path = tokenlists
 	url = https://github.com/viaprotocol/tokenlists
+[submodule "chains"]
+	path = chains
+	url = git@github.com:ethereum-lists/chains

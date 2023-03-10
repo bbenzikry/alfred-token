@@ -8,19 +8,21 @@ PARENT_DIR=$(pwd)
 mkdir output
 cd output
 cp -f ${PARENT_DIR}/src/info.plist.xml ./info.plist
-cp -f ${PARENT_DIR}/src/search.sh ./search.sh
+cp -f ${PARENT_DIR}/src/utils.zsh ./utils.zsh
+cp -f ${PARENT_DIR}/src/search.zsh ./search.zsh
+cp -f ${PARENT_DIR}/src/open.zsh ./open.zsh
 
 echo "Updating version ..."
-# TODO: get from env
-curVersion="v1.0.0"
+curVersion=${WORKFLOW_VERSION:-"v1.0.0"}
 sed -i '' 's/{{version}}/'${curVersion}'/' info.plist
 
 echo "Add README ..."
 readme="${PARENT_DIR}/src/README.md"
 sed -i '' -e "/{{readme}}/{r ${readme}" -e 'd' -e '}' info.plist
 
-echo "Add tokens ..."
+echo "Add db ..."
 cp -f ${PARENT_DIR}/tokens.json ./tokens.json
+cp -f ${PARENT_DIR}/chains.json ./chains.json
 
 echo "Add icons ..." 
 [ -d ./icons ] && rm -rf ./icons
@@ -33,7 +35,7 @@ cp -R -f ${PARENT_DIR}/icons ./icons
 echo "Add res ... "
 cp -f ${PARENT_DIR}/res/* .
 
-# TODO:
+# Note: will be done via package manager instead
 # echo "Injecting auto-update script ..."
 # update="$(mktemp)"
 # cat ${PARENT_DIR}/src/update.sh | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' > ${update}
