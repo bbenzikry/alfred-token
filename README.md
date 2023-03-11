@@ -7,7 +7,6 @@ An [Alfred](https://www.alfredapp.com/) workflow that makes it easy to search fo
 </div>
 
 ## Usage
-Type a combination of chain id and token name, to find an address and copy it.
 
     token [chain_id] [token_name(optional)]
     token [token_name] [chain_id(optional)]
