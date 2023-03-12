@@ -15,6 +15,8 @@ An [Alfred](https://www.alfredapp.com/) workflow that makes it easy to search fo
     token 1 --> Find tokens on Mainnet
     token 137 --> Find tokens on Polygon
     token 137 USDC --> Find tokens containing USDC on Polygon
+    token 0x0d50 --> Find all tokens starting with 0x0d50
+    token 137 0x0d50 --> Find all tokens on Polygon starting with 0x0d50
 
     return (↵) : Copy the selected address to your clipboard.
     cmd + return (⌘↵) : Show in explorer ( Etherscan based only at the moment )

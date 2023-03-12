@@ -99,12 +99,12 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>function word() {
-	 echo $1 | grep -i -q -x '[a-z]*'
+				<string>function word_or_addr() {
+	 (echo $1 | grep -i -q -x '[a-z]*') || (echo $1 | grep -i -q -x '^0[xX].*')
 }
 
 vars=($1)
-if word ${vars[0]}; then
+if word_or_addr ${vars[0]}; then
     CHAIN_ID="${vars[1]}"
     if [ -z "$CHAIN_ID" ]; then
 	    CHAIN_ID="0"
