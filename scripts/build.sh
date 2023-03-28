@@ -13,7 +13,7 @@ cp -f ${PARENT_DIR}/src/search.zsh ./search.zsh
 cp -f ${PARENT_DIR}/src/open.zsh ./open.zsh
 
 echo "Updating version ..."
-curVersion=${WORKFLOW_VERSION:-"v1.0.1"}
+curVersion=${WORKFLOW_VERSION:-"v1.0.2"}
 sed -i '' 's/{{version}}/'${curVersion}'/' info.plist
 
 echo "Add README ..."
