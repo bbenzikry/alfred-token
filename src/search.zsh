@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 . ./utils.zsh
-SUBTITLE='{subtitle:(.subtitle+" ( Chain ID " + (.chainId|tostring) + " )")}'
+SUBTITLE='{arg:((.chainId | tostring) + " " + .address),subtitle:(.subtitle+" ( Chain ID " + (.chainId|tostring) + " )")}'
 
 # params
 CHAIN_ID=$1
